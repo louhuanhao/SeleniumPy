@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import unittest
-from web_auto_zentao.common import HTMLTestRunner_cn
+from common import HTMLTestRunner_cn
 
 # 获取存放路径
 casePath = 'D:\pyCodeDesign\web_auto_zentao\case'
