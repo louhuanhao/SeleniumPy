@@ -11,6 +11,7 @@ class test_AddBug(unittest.TestCase):
     def setUpClass(cls):
         cls.driver = webdriver.Chrome()
         cls.driver.maximize_window()
+
         cls.ztb = ZenTaoBug(cls.driver)
         ztl = ZenTaoLogin(cls.driver)
         ztl.login()

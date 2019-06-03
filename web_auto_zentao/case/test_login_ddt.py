@@ -14,7 +14,7 @@ propath = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 p = os.path.join(propath, "common", "zentao.xlsx")
 # p = "D:\\BaiduNetdiskDownload\\zentao.xlsx"
 n = "Sheet1"
-data = ExcelUtil(p, n)
+data = ExcelUtil(p, n)#获取路径p下的n页
 testdates = data.dict_data()
 
 

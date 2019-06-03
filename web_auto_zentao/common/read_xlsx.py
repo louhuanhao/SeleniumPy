@@ -4,10 +4,13 @@ import xlrd
 
 class ExcelUtil():
     def __init__(self, excelPath, sheetName):
+        # 打开这个路径下的文档
         self.data = xlrd.open_workbook(excelPath)
+        # 选择sheet页
         self.table = self.data.sheet_by_name(sheetName)
         # 获取第一行作为key值
         self.keys = self.table.row_values(0)
+
         # 获取总行数
         self.rowNum = self.table.nrows
         # 获取总列数
@@ -23,7 +26,9 @@ class ExcelUtil():
                 s = {}
                 # 从第二行取对应values值
                 values = self.table.row_values(j)
+                print(values)
                 for x in range(self.colNum):
+                    # 添加键值对
                     s[self.keys[x]] = values[x]
                 r.append(s)
                 j += 1
